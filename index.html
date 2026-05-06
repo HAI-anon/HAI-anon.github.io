@@ -54,6 +54,13 @@
       margin: 5px;
     }
 
+    .release-note {
+      margin-top: 10px;
+      color: #5c6670;
+      font-size: 0.92rem;
+      min-height: 1.4em;
+    }
+
     .section {
       padding: 3rem 1.5rem;
     }
@@ -663,12 +670,13 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/HAI-anon/HAI-anon.github.io" target="_blank" class="external-link button is-normal is-rounded is-dark button-gap">
+                <a href="#" id="codeButton" class="external-link button is-normal is-rounded is-dark button-gap" role="button" aria-describedby="codeReleaseNote">
                   <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
                 </a>
               </span>
             </div>
+            <p class="release-note" id="codeReleaseNote" aria-live="polite"></p>
           </div>
 
           <div class="content has-text-centered" style="margin-top: 28px;">
@@ -1231,6 +1239,15 @@
   initializeCaseViewer("longQual", longQualitativeCases);
   initializeCaseViewer("shortQual", shortHighlightCases);
   initializeComparisonViewer(comparisonCases);
+
+  const codeButton = document.getElementById("codeButton");
+  const codeReleaseNote = document.getElementById("codeReleaseNote");
+  if (codeButton && codeReleaseNote) {
+    codeButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      codeReleaseNote.textContent = "The code is not yet open source. Please stay tuned!";
+    });
+  }
 </script>
 
 </body>
