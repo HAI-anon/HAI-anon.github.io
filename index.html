@@ -875,6 +875,21 @@
         <p>Use matched rollouts to compare HAI with Base and Ctrl-World, then study which learned-world-model diagnostics matter for downstream VLA policies.</p>
       </div>
     </div>
+    <div class="comparison-figure-card">
+      <a
+        class="comparison-figure-link"
+        href="media/quantitative/hai-quantitative-results.png"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          class="comparison-figure"
+          src="media/quantitative/hai-quantitative-results.png"
+          alt="Quantitative results table for HAI, Base model, Symmetric View Conditioning, and Ctrl-World on AgiBot validation clips">
+      </a>
+      <p class="comparison-caption">
+        <strong>Quantitative results on AgiBot validation clips.</strong> We evaluate 10-second generated trajectories on the same 256 validation clips. Each method uses recorded validation actions and its own implementation-specific conditioning, without ground-truth visual-frame feedback after the initial context.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -886,7 +901,7 @@
         <div class="qual-case-buttons" id="comparisonCaseButtons" aria-label="Comparison case selector"></div>
         <div class="qual-nav">
           <button class="qual-nav-button" id="comparisonPrevButton" type="button" aria-label="Show previous comparison case">Prev</button>
-          <div class="qual-counter" id="comparisonCaseCounter">1 / 2</div>
+          <div class="qual-counter" id="comparisonCaseCounter">1 / 3</div>
           <button class="qual-nav-button" id="comparisonNextButton" type="button" aria-label="Show next comparison case">Next</button>
         </div>
       </div>
