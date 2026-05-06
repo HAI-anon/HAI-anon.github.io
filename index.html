@@ -426,6 +426,26 @@
       color: #334155;
     }
 
+    .comparison-subsection-label {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: #eef3f8;
+      border: 1px solid #d9e2ec;
+      color: #4b5a69;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 12px;
+      margin-bottom: 14px;
+    }
+
+    .comparison-figure-card.is-secondary {
+      margin-top: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+    }
+
     .ablation-card {
       background: #ffffff;
       border: 1px solid #dbe3eb;
@@ -924,6 +944,22 @@
       </a>
       <p class="comparison-caption" id="comparisonCaseCaption">
         <strong>HAI vs Ctrl-World.</strong> Compared with Ctrl-World, HAI maintains stronger long-horizon visual fidelity and interaction consistency under the same rollout setting.
+      </p>
+    </div>
+    <div class="comparison-figure-card is-secondary">
+      <div class="comparison-subsection-label">DROID Validation</div>
+      <a
+        class="comparison-figure-link"
+        href="media/quantitative/hai-vs-ctrlworld-droid-results.png"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          class="comparison-figure"
+          src="media/quantitative/hai-vs-ctrlworld-droid-results.png"
+          alt="Quantitative comparison between Ctrl-World and HAI on the DROID validation set">
+      </a>
+      <p class="comparison-caption">
+        <strong>Quantitative results on the DROID validation set.</strong> Results are averaged within each camera type before reporting. HAI improves most metrics over Ctrl-World, with the clearest gains on external-view rollouts.
       </p>
     </div>
   </div>
