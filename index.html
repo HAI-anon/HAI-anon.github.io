@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="HAI: Hierarchical Anchored Interaction for Multi-View Bimanual World Models">
+  <meta name="keywords" content="World Models, Bimanual Manipulation, Multi-View Prediction, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAI Project Page</title>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <meta property="og:title" content="HAI: Hierarchical Anchored Interaction for Multi-View Bimanual World Models">
+  <meta property="og:description" content="Anonymous project page for HAI: Hierarchical Anchored Interaction for Multi-View Bimanual World Models.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hai-anon.github.io/">
+  <meta property="og:image" content="https://hai-anon.github.io/assets/social-card.svg">
+
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #fcfcfc;
+      color: #2f3640;
+    }
+
+    .title-color {
+      background: linear-gradient(45deg, #ea7a25, #2f6fed, #2da463);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    .subtitle-small {
+      font-size: 1.35rem !important;
+      margin-top: 10px !important;
+      font-weight: 400;
+      color: #4a4a4a;
+    }
+
+    .publication-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .button-gap {
+      margin: 5px;
+    }
+
+    .section {
+      padding: 3rem 1.5rem;
+    }
+
+    .container.is-max-desktop {
+      max-width: 1040px;
+    }
+
+    .top-bg-wrapper {
+      position: relative;
+      background-color: #eef4f8;
+      padding-bottom: 2rem;
+    }
+
+    .bg-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .bg-grid-3d {
+      position: absolute;
+      top: 8%;
+      left: -50%;
+      width: 200%;
+      height: 150%;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.85) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.85) 2px, transparent 2px);
+      background-size: 80px 80px;
+      transform: perspective(1000px) rotateX(72deg);
+      transform-origin: top center;
+    }
+
+    .wireframe-obj {
+      position: absolute;
+      opacity: 0.82;
+    }
+
+    .wireframe-obj svg {
+      animation: float-up-down 6s ease-in-out infinite;
+    }
+
+    @keyframes float-up-down {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .obj-cylinder { top: 18%; left: 14%; }
+    .obj-cylinder svg { width: 100px; height: 150px; }
+    .obj-panel { top: 34%; right: 13%; }
+    .obj-panel svg {
+      width: 170px;
+      height: 120px;
+      animation-delay: -3s;
+    }
+
+    .bg-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 350px;
+      background: linear-gradient(to bottom, rgba(252,252,252,0) 0%, #fcfcfc 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .content-layer {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-figure {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid #d8dee4;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      background: #fff;
+    }
+
+    .gray-box-container {
+      background-color: #f5f7fa;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .video-wrapper {
+      text-align: center;
+    }
+
+    .video-wrapper h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #4a4a4a;
+    }
+
+    .video-wrapper video,
+    .video-wrapper img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: #000;
+    }
+
+    .qual-panel {
+      background: #ffffff;
+      border: 1px solid #dbe3eb;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(35, 53, 71, 0.08);
+      padding: 18px 18px 20px 18px;
+    }
+
+    .qual-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .qual-case-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .qual-case-button {
+      appearance: none;
+      border: 1px solid #d6e0ea;
+      background: #ffffff;
+      color: #435364;
+      border-radius: 999px;
+      padding: 9px 15px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 4px rgba(35, 53, 71, 0.04);
+    }
+
+    .qual-case-button:hover {
+      border-color: #2f6fed;
+      color: #2f6fed;
+      transform: translateY(-1px);
+    }
+
+    .qual-case-button.is-active {
+      background: linear-gradient(135deg, #2f6fed 0%, #1f5ad0 100%);
+      border-color: #2f6fed;
+      color: #ffffff;
+      box-shadow: 0 8px 18px rgba(47, 111, 237, 0.2);
+    }
+
+    .qual-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qual-nav-button {
+      appearance: none;
+      border: 1px solid #d6e0ea;
+      background: #f8fafc;
+      color: #435364;
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .qual-nav-button:hover:not(:disabled) {
+      border-color: #2f6fed;
+      color: #2f6fed;
+      background: #ffffff;
+    }
+
+    .qual-nav-button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .qual-counter {
+      min-width: 52px;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #5b6775;
+    }
+
+    .qual-panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .qual-panel-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .qual-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .qual-case-meta {
+      min-width: 0;
+      flex: 1 1 460px;
+    }
+
+    .qual-case-note {
+      margin-top: 8px;
+      margin-bottom: 12px;
+      color: #55606b;
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .qual-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .qual-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid #d8e0ea;
+      background: #f7f9fc;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #51606f;
+    }
+
+    .qual-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .qual-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f7f9fc;
+      border: 1px solid #d9e2ec;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.86rem;
+      color: #475569;
+      font-weight: 600;
+    }
+
+    .qual-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      flex: 0 0 10px;
+    }
+
+    .qual-dot.prediction {
+      background: #ea7a25;
+    }
+
+    .qual-dot.groundtruth {
+      background: #2f6fed;
+    }
+
+    .qual-grid {
+      display: block;
+    }
+
+    .qual-video-area {
+      min-width: 0;
+    }
+
+    .qual-col-labels {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .qual-col-label {
+      text-align: center;
+      background: #eef3f8;
+      border: 1px solid #d9e2ec;
+      border-radius: 12px;
+      color: #435364;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      padding: 10px 12px;
+    }
+
+    .qual-video-shell {
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid #d4dce5;
+      background: #000;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+    }
+
+    .qual-caption {
+      margin-top: 14px;
+      text-align: center;
+      color: #55606b;
+      font-size: 0.95rem;
+    }
+
+    .qual-caption strong {
+      color: #334155;
+    }
+
+    .comparison-figure-card {
+      background: #ffffff;
+      border: 1px solid #dbe3eb;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(35, 53, 71, 0.08);
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .comparison-figure-link {
+      display: block;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #d4dce5;
+      background: #ffffff;
+    }
+
+    .comparison-figure {
+      width: 100%;
+      display: block;
+    }
+
+    .comparison-caption {
+      margin-top: 14px;
+      text-align: center;
+      color: #55606b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .comparison-caption strong {
+      color: #334155;
+    }
+
+    .citation-box {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+
+    .pill-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      margin-bottom: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border: 1px solid #d7dee5;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #4a5560;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .pill:hover {
+      border-color: #2f6fed;
+      color: #2f6fed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(47, 111, 237, 0.12);
+    }
+
+    .contrib-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .contrib-card {
+      background: #fff;
+      border: 1px solid #dde4ea;
+      border-radius: 14px;
+      padding: 18px 18px 16px 18px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    }
+
+    .contrib-card h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .contrib-card p {
+      font-size: 0.95rem;
+      color: #55606b;
+    }
+
+    .eval-chip-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .eval-chip-card {
+      background: #fff;
+      border: 1px solid #dde4ea;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .eval-chip-card h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .eval-chip-card p {
+      color: #55606b;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .contrib-grid,
+      .eval-chip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qual-toolbar,
+      .qual-summary,
+      .qual-panel-head {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .qual-nav {
+        justify-content: space-between;
+      }
+
+      .qual-case-buttons {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="top-bg-wrapper">
+  <div class="bg-layer">
+    <div class="bg-grid-3d"></div>
+
+    <div class="wireframe-obj obj-cylinder">
+      <svg viewBox="0 0 70 100" fill="none" stroke="#ffffff" stroke-width="1.5">
+        <ellipse cx="35" cy="18" rx="28" ry="10" fill="rgba(255,255,255,0.25)"/>
+        <path d="M7 18V82" stroke="rgba(255,255,255,0.45)"/>
+        <path d="M63 18V82" stroke="rgba(255,255,255,0.45)"/>
+        <ellipse cx="35" cy="82" rx="28" ry="10" fill="rgba(255,255,255,0.12)"/>
+      </svg>
+    </div>
+
+    <div class="wireframe-obj obj-panel">
+      <svg viewBox="0 0 110 80" fill="none" stroke="#ffffff" stroke-width="1.5">
+        <polygon points="18,20 92,10 102,58 28,70" fill="rgba(255,255,255,0.22)"/>
+        <line x1="18" y1="20" x2="28" y2="70" stroke="rgba(255,255,255,0.45)"/>
+        <line x1="92" y1="10" x2="102" y2="58" stroke="rgba(255,255,255,0.45)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="bg-fade"></div>
+  <div class="content-layer">
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop" style="margin-top: 40px;">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+            <span class="title-color">HAI</span>: Hierarchical Anchored Interaction for Multi-View Bimanual World Models
+          </h1>
+          <h2 class="subtitle is-3 publication-subtitle subtitle-small">
+            Structured conditioning for long-horizon multi-view bimanual rollout prediction
+          </h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+          <div class="is-size-6 has-text-centered" style="margin-top: 15px; margin-bottom: 10px;">
+            <span class="author-block"><strong>Anonymous Institution</strong></span>
+          </div>
+
+          <div class="pill-row">
+            <a class="pill" href="#abstract">Anonymous Submission</a>
+            <a class="pill" href="#comparison">AgiBot Evaluation</a>
+            <a class="pill" href="#pipeline">Rectified-Flow DiT</a>
+            <a class="pill" href="#qualitative">Three-View Rollout</a>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark button-gap">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/HAI-anon/HAI-anon.github.io" target="_blank" class="external-link button is-normal is-rounded is-dark button-gap">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div class="content has-text-centered" style="margin-top: 28px;">
+            <img src="assets/hai-architecture.png" class="hero-figure" alt="HAI architecture figure">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose <strong>HAI: Hierarchical Anchored Interaction</strong>, a world-modeling framework for
+            multi-view bimanual manipulation that treats long-horizon rollout as a structured conditioning problem.
+            HAI separates <strong>Hierarchical Action Alignment</strong>, <strong>Anchored Static-Dynamic Decoupling</strong>,
+            and <strong>Interaction-Structured Multi-View Communication</strong> within a rectified-flow DiT backbone.
+            The model fuses anchor frames, history frames, view-routed action tokens, and text instructions to predict
+            synchronized future frames across left, third, and right views. On AgiBot, we evaluate HAI against
+            <strong>Base</strong>, an implementation-matched Symmetric View Conditioning baseline, and <strong>Ctrl-World</strong>
+            under matched validation clips and rollout horizons, and we further analyze learned-world-model rollout
+            diagnostics relevant to downstream VLA policies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+
+<section class="section" id="pipeline">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">HAI Pipeline</h2>
+    <div class="content has-text-centered">
+      <img src="assets/hai-architecture.png" style="width: 100%; border-radius: 12px; border: 1px solid #d8dee4;" alt="HAI pipeline architecture">
+    </div>
+
+    <div class="contrib-grid">
+      <div class="contrib-card">
+        <h3>1. Structured conditioning formulation</h3>
+        <p>
+          We formulate bimanual multiview rollout as a structured conditioning problem and instantiate it as HAI,
+          separating Hierarchical Action Alignment, Anchored Static-Dynamic Decoupling, and Interaction-Structured
+          Multi-View Communication.
+        </p>
+      </div>
+      <div class="contrib-card">
+        <h3>2. Rectified-flow DiT implementation</h3>
+        <p>
+          We implement HAI in a rectified-flow DiT with camera-contract masks for view communication and actuator
+          exposure, preserving explicit structure across views and control channels.
+        </p>
+      </div>
+      <div class="contrib-card">
+        <h3>3. AgiBot evaluation and diagnostics</h3>
+        <p>
+          On AgiBot, we compare HAI against Base and Ctrl-World on the same validation clips and matched generated
+          trajectory lengths, and we report learned-world-model rollout diagnostics for downstream VLA policies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="qualitative">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Featured Long-Horizon Rollout</h2>
+    <div class="content has-text-centered" style="margin-top: 18px;">
+      <p>
+        Long-horizon rollout cases are presented separately from short supplementary clips, while preserving the same structured comparison layout across views.
+      </p>
+    </div>
+    <div class="gray-box-container">
+      <div class="qual-panel">
+        <div class="qual-toolbar">
+          <div class="qual-case-buttons" id="longQualCaseButtons" aria-label="Long rollout case selector"></div>
+          <div class="qual-nav">
+            <button class="qual-nav-button" id="longQualPrevButton" type="button" aria-label="Show previous long rollout case">Prev</button>
+            <div class="qual-counter" id="longQualCaseCounter">1 / 1</div>
+            <button class="qual-nav-button" id="longQualNextButton" type="button" aria-label="Show next long rollout case">Next</button>
+          </div>
+        </div>
+        <div class="qual-summary">
+          <div class="qual-case-meta">
+            <div class="qual-panel-title" id="longQualCaseTitle">Case 01: Three-view bimanual rollout comparison</div>
+            <p class="qual-case-note" id="longQualCaseNote">
+              Held-out AgiBot validation clip rendered as a synchronized 2x3 panel for direct comparison between HAI rollout prediction and ground truth.
+            </p>
+            <div class="qual-badge-row" id="longQualCaseBadges">
+              <span class="qual-badge">AgiBot validation</span>
+              <span class="qual-badge">Three-view rollout</span>
+              <span class="qual-badge">Prediction vs GT</span>
+            </div>
+          </div>
+        </div>
+        <div class="qual-panel-head">
+          <div class="qual-legend">
+            <div class="qual-legend-item">
+              <span class="qual-dot prediction"></span>
+              <span id="longQualLegendTopText">Top row = HAI prediction</span>
+            </div>
+            <div class="qual-legend-item">
+              <span class="qual-dot groundtruth"></span>
+              <span id="longQualLegendBottomText">Bottom row = ground truth</span>
+            </div>
+          </div>
+        </div>
+        <div class="qual-grid">
+          <div class="qual-video-area">
+            <div class="qual-col-labels" aria-hidden="true">
+              <div class="qual-col-label" id="longQualColLabel1">Third View</div>
+              <div class="qual-col-label" id="longQualColLabel2">Left View</div>
+              <div class="qual-col-label" id="longQualColLabel3">Right View</div>
+            </div>
+            <div class="qual-video-shell">
+              <div class="video-wrapper">
+                <video id="longQualCaseVideo" autoplay muted loop playsinline controls style="max-width: 100%; margin: 0 auto; display: block;">
+                  <source id="longQualCaseVideoSource" src="media/qualitative/task-666-trajectory-compare.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="qual-caption" id="longQualCaseCaption">
+          <strong>Synchronized multi-view rollout</strong> on a held-out validation clip across third, left, and right cameras.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="short-highlights">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Short Highlights</h2>
+    <div class="content has-text-centered" style="margin-top: 18px;">
+      <p>
+        Short supplementary clips are shown in a separate viewer so they do not mix with the long-horizon evidence, while keeping the same GT-versus-prediction presentation style.
+      </p>
+    </div>
+    <div class="gray-box-container">
+      <div class="qual-panel">
+        <div class="qual-toolbar">
+          <div class="qual-case-buttons" id="shortQualCaseButtons" aria-label="Short highlight case selector"></div>
+          <div class="qual-nav">
+            <button class="qual-nav-button" id="shortQualPrevButton" type="button" aria-label="Show previous short highlight case">Prev</button>
+            <div class="qual-counter" id="shortQualCaseCounter">1 / 1</div>
+            <button class="qual-nav-button" id="shortQualNextButton" type="button" aria-label="Show next short highlight case">Next</button>
+          </div>
+        </div>
+        <div class="qual-summary">
+          <div class="qual-case-meta">
+            <div class="qual-panel-title" id="shortQualCaseTitle">Case 01: Short supplementary rollout clip</div>
+            <p class="qual-case-note" id="shortQualCaseNote">
+              Compact supplementary clip shown in the same viewer format for direct comparison, with ground truth on top and HAI prediction on bottom.
+            </p>
+            <div class="qual-badge-row" id="shortQualCaseBadges">
+              <span class="qual-badge">Short clip</span>
+              <span class="qual-badge">Three-view rollout</span>
+              <span class="qual-badge">GT vs prediction</span>
+            </div>
+          </div>
+        </div>
+        <div class="qual-panel-head">
+          <div class="qual-legend">
+            <div class="qual-legend-item">
+              <span class="qual-dot groundtruth"></span>
+              <span id="shortQualLegendTopText">Top row = ground truth</span>
+            </div>
+            <div class="qual-legend-item">
+              <span class="qual-dot prediction"></span>
+              <span id="shortQualLegendBottomText">Bottom row = HAI prediction</span>
+            </div>
+          </div>
+        </div>
+        <div class="qual-grid">
+          <div class="qual-video-area">
+            <div class="qual-col-labels" aria-hidden="true">
+              <div class="qual-col-label" id="shortQualColLabel1">Left View</div>
+              <div class="qual-col-label" id="shortQualColLabel2">Third View</div>
+              <div class="qual-col-label" id="shortQualColLabel3">Right View</div>
+            </div>
+            <div class="qual-video-shell">
+              <div class="video-wrapper">
+                <video id="shortQualCaseVideo" autoplay muted loop playsinline controls style="max-width: 100%; margin: 0 auto; display: block;">
+                  <source id="shortQualCaseVideoSource" src="media/highlights/short-highlight-01.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="qual-caption" id="shortQualCaseCaption">
+          <strong>Short supplementary rollout</strong> on a separate clip across left, third, and right cameras.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="comparison">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Evaluation Lenses</h2>
+    <div class="eval-chip-grid">
+      <div class="eval-chip-card">
+        <h4>Hierarchical Action Alignment</h4>
+        <p>Check whether view-routed action tokens expose actuator information consistently with visible hand motion across left, third, and right views.</p>
+      </div>
+      <div class="eval-chip-card">
+        <h4>Anchored Static-Dynamic Decoupling</h4>
+        <p>Inspect whether anchor retrieval preserves stable scene context while the history stream focuses on dynamic contact and object interaction.</p>
+      </div>
+      <div class="eval-chip-card">
+        <h4>Cross-view Communication</h4>
+        <p>Evaluate whether camera-contract masks allow synchronized rollout prediction without washing out view-specific evidence.</p>
+      </div>
+      <div class="eval-chip-card">
+        <h4>Baseline and Policy Diagnostics</h4>
+        <p>Use matched rollouts to compare HAI with Base and Ctrl-World, then study which learned-world-model diagnostics matter for downstream VLA policies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">HAI vs Ctrl-World</h2>
+    <div class="comparison-figure-card">
+      <div class="qual-toolbar">
+        <div class="qual-case-buttons" id="comparisonCaseButtons" aria-label="Comparison case selector"></div>
+        <div class="qual-nav">
+          <button class="qual-nav-button" id="comparisonPrevButton" type="button" aria-label="Show previous comparison case">Prev</button>
+          <div class="qual-counter" id="comparisonCaseCounter">1 / 2</div>
+          <button class="qual-nav-button" id="comparisonNextButton" type="button" aria-label="Show next comparison case">Next</button>
+        </div>
+      </div>
+      <div class="qual-summary">
+        <div class="qual-case-meta">
+          <div class="qual-panel-title" id="comparisonCaseTitle">Case 01</div>
+        </div>
+      </div>
+      <a
+        class="comparison-figure-link"
+        id="comparisonFigureLink"
+        href="media/comparisons/hai-vs-ctrlworld-case-01.png"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          class="comparison-figure"
+          id="comparisonFigureImage"
+          src="media/comparisons/hai-vs-ctrlworld-case-01.png"
+          alt="Comparison figure between Ground Truth, Ctrl-World, and HAI across rollout steps">
+      </a>
+      <p class="comparison-caption" id="comparisonCaseCaption">
+        <strong>HAI vs Ctrl-World.</strong> Compared with Ctrl-World, HAI maintains stronger long-horizon visual fidelity and interaction consistency under the same rollout setting.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Citation</h2>
+    <div class="citation-box">
+@misc{hai_multiview_bimanual_world_model_2026,
+  title        = {HAI: Hierarchical Anchored Interaction for Multi-View Bimanual World Models},
+  author       = {Anonymous Authors},
+  year         = {2026},
+  note         = {Project page},
+  howpublished = {\url{https://hai-anon.github.io/}}
+}
+    </div>
+  </div>
+</section>
+
+<script>
+  const longQualitativeCases = [
+    {
+      id: "case-01",
+      label: "Case 01",
+      title: "Case 01: Three-view bimanual rollout comparison",
+      video: "media/qualitative/task-666-trajectory-compare.mp4",
+      note: "Held-out AgiBot validation clip rendered as a synchronized 2x3 panel for multi-view qualitative inspection.",
+      caption: "<strong>Synchronized multi-view rollout</strong> on a held-out validation clip across third, left, and right cameras.",
+      badges: ["AgiBot validation", "Three-view rollout", "Prediction vs GT"],
+      topLegend: "Top row = HAI prediction",
+      bottomLegend: "Bottom row = ground truth",
+      columnLabels: ["Third View", "Left View", "Right View"]
+    }
+  ];
+
+  const shortHighlightCases = [
+    {
+      id: "case-01",
+      label: "Case 01",
+      title: "Case 01: Short supplementary rollout clip",
+      video: "media/highlights/short-highlight-01.mp4",
+      note: "Compact supplementary clip shown in the same viewer format for shorter-horizon qualitative inspection.",
+      caption: "<strong>Short supplementary rollout</strong> on a separate clip across left, third, and right cameras.",
+      badges: ["Short clip", "Three-view rollout", "GT vs prediction"],
+      topLegend: "Top row = ground truth",
+      bottomLegend: "Bottom row = HAI prediction",
+      columnLabels: ["Left View", "Third View", "Right View"]
+    }
+  ];
+
+  const comparisonCases = [
+    {
+      label: "Case 01",
+      title: "Case 01",
+      image: "media/comparisons/hai-vs-ctrlworld-case-01.png",
+      alt: "Comparison figure between Ground Truth, Ctrl-World, and HAI across rollout steps for case 01",
+      caption: "<strong>HAI vs Ctrl-World.</strong> Compared with Ctrl-World, HAI maintains stronger long-horizon visual fidelity and interaction consistency under the same rollout setting."
+    },
+    {
+      label: "Case 02",
+      title: "Case 02",
+      image: "media/comparisons/hai-vs-ctrlworld-case-02.png",
+      alt: "Comparison figure between Ground Truth, Ctrl-World, and HAI across rollout steps for case 02",
+      caption: "<strong>Case 02.</strong> A more complex task where HAI remains more stable than Ctrl-World under the same rollout setting."
+    },
+    {
+      label: "Case 03",
+      title: "Case 03",
+      image: "media/comparisons/hai-vs-ctrlworld-case-03.png",
+      alt: "Comparison figure between Ground Truth, Ctrl-World, and HAI across rollout steps for case 03",
+      caption: "<strong>Case 03.</strong> An additional comparison case where HAI preserves more stable rollout quality than Ctrl-World under the same rollout setting."
+    }
+  ];
+
+  function initializeCaseViewer(prefix, cases) {
+    const buttonsRoot = document.getElementById(`${prefix}CaseButtons`);
+    const prevButton = document.getElementById(`${prefix}PrevButton`);
+    const nextButton = document.getElementById(`${prefix}NextButton`);
+    const counter = document.getElementById(`${prefix}CaseCounter`);
+    const title = document.getElementById(`${prefix}CaseTitle`);
+    const note = document.getElementById(`${prefix}CaseNote`);
+    const badges = document.getElementById(`${prefix}CaseBadges`);
+    const caption = document.getElementById(`${prefix}CaseCaption`);
+    const video = document.getElementById(`${prefix}CaseVideo`);
+    const videoSource = document.getElementById(`${prefix}CaseVideoSource`);
+    const legendTop = document.getElementById(`${prefix}LegendTopText`);
+    const legendBottom = document.getElementById(`${prefix}LegendBottomText`);
+    const col1 = document.getElementById(`${prefix}ColLabel1`);
+    const col2 = document.getElementById(`${prefix}ColLabel2`);
+    const col3 = document.getElementById(`${prefix}ColLabel3`);
+
+    if (!buttonsRoot || !prevButton || !nextButton || !counter || !title || !note || !badges || !caption || !video || !videoSource || !legendTop || !legendBottom || !col1 || !col2 || !col3 || !cases.length) {
+      return;
+    }
+
+    let currentIndex = 0;
+    const buttons = [];
+
+    const renderBadges = (items) => {
+      badges.innerHTML = "";
+      items.forEach((item) => {
+        const badge = document.createElement("span");
+        badge.className = "qual-badge";
+        badge.textContent = item;
+        badges.appendChild(badge);
+      });
+    };
+
+    const updateCase = (index) => {
+      currentIndex = index;
+      const current = cases[currentIndex];
+
+      buttons.forEach((button, buttonIndex) => {
+        const isActive = buttonIndex === currentIndex;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      title.textContent = current.title;
+      note.textContent = current.note;
+      caption.innerHTML = current.caption;
+      legendTop.textContent = current.topLegend;
+      legendBottom.textContent = current.bottomLegend;
+      col1.textContent = current.columnLabels[0];
+      col2.textContent = current.columnLabels[1];
+      col3.textContent = current.columnLabels[2];
+      renderBadges(current.badges);
+      counter.textContent = `${currentIndex + 1} / ${cases.length}`;
+
+      if (videoSource.getAttribute("src") !== current.video) {
+        videoSource.setAttribute("src", current.video);
+        video.load();
+      }
+
+      const disableNav = cases.length <= 1;
+      prevButton.disabled = disableNav;
+      nextButton.disabled = disableNav;
+
+      video.play().catch(() => {});
+    };
+
+    const shiftCase = (delta) => {
+      const nextIndex = (currentIndex + delta + cases.length) % cases.length;
+      updateCase(nextIndex);
+    };
+
+    cases.forEach((item, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "qual-case-button";
+      button.textContent = item.label;
+      button.setAttribute("aria-pressed", "false");
+      button.addEventListener("click", () => updateCase(index));
+      buttonsRoot.appendChild(button);
+      buttons.push(button);
+    });
+
+    prevButton.addEventListener("click", () => shiftCase(-1));
+    nextButton.addEventListener("click", () => shiftCase(1));
+
+    updateCase(0);
+  }
+
+  function initializeComparisonViewer(cases) {
+    const buttonsRoot = document.getElementById("comparisonCaseButtons");
+    const prevButton = document.getElementById("comparisonPrevButton");
+    const nextButton = document.getElementById("comparisonNextButton");
+    const counter = document.getElementById("comparisonCaseCounter");
+    const title = document.getElementById("comparisonCaseTitle");
+    const caption = document.getElementById("comparisonCaseCaption");
+    const link = document.getElementById("comparisonFigureLink");
+    const image = document.getElementById("comparisonFigureImage");
+
+    if (!buttonsRoot || !prevButton || !nextButton || !counter || !title || !caption || !link || !image || !cases.length) {
+      return;
+    }
+
+    let currentIndex = 0;
+    const buttons = [];
+
+    const updateCase = (index) => {
+      currentIndex = index;
+      const current = cases[currentIndex];
+
+      buttons.forEach((button, buttonIndex) => {
+        const isActive = buttonIndex === currentIndex;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      title.textContent = current.title;
+      counter.textContent = `${currentIndex + 1} / ${cases.length}`;
+      caption.innerHTML = current.caption;
+      link.setAttribute("href", current.image);
+      image.setAttribute("src", current.image);
+      image.setAttribute("alt", current.alt);
+
+      const disableNav = cases.length <= 1;
+      prevButton.disabled = disableNav;
+      nextButton.disabled = disableNav;
+    };
+
+    const shiftCase = (delta) => {
+      const nextIndex = (currentIndex + delta + cases.length) % cases.length;
+      updateCase(nextIndex);
+    };
+
+    cases.forEach((item, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "qual-case-button";
+      button.textContent = item.label;
+      button.setAttribute("aria-pressed", "false");
+      button.addEventListener("click", () => updateCase(index));
+      buttonsRoot.appendChild(button);
+      buttons.push(button);
+    });
+
+    prevButton.addEventListener("click", () => shiftCase(-1));
+    nextButton.addEventListener("click", () => shiftCase(1));
+
+    updateCase(0);
+  }
+
+  initializeCaseViewer("longQual", longQualitativeCases);
+  initializeCaseViewer("shortQual", shortHighlightCases);
+  initializeComparisonViewer(comparisonCases);
+</script>
+
+</body>
+</html>

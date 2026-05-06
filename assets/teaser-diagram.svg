@@ -1,0 +1,59 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" rx="42" fill="#F4EEE4"/>
+  <rect x="34" y="34" width="1332" height="832" rx="32" fill="#FDFBF7" stroke="#D8E3E7" stroke-width="2"/>
+
+  <text x="84" y="116" fill="#182530" font-family="Arial, sans-serif" font-size="42" font-weight="700">HAI Overview</text>
+  <text x="84" y="160" fill="#55656F" font-family="Arial, sans-serif" font-size="24">Hierarchical Anchored Interaction for Multi-View Bimanual World Models</text>
+
+  <rect x="84" y="220" width="370" height="560" rx="28" fill="#14242F"/>
+  <text x="122" y="282" fill="#F7F2E8" font-family="Arial, sans-serif" font-size="30" font-weight="700">Structured Inputs</text>
+  <rect x="122" y="330" width="290" height="96" rx="18" fill="#1B3645"/>
+  <rect x="142" y="348" width="76" height="60" rx="10" fill="#F8A31A"/>
+  <rect x="228" y="348" width="76" height="60" rx="10" fill="#4C87F5"/>
+  <rect x="314" y="348" width="76" height="60" rx="10" fill="#59B564"/>
+  <text x="132" y="452" fill="#A5C7CE" font-family="Arial, sans-serif" font-size="22" font-weight="700">anchor frames + history frames</text>
+
+  <rect x="122" y="488" width="290" height="92" rx="18" fill="#F8F1DE"/>
+  <text x="144" y="534" fill="#182530" font-family="Arial, sans-serif" font-size="24" font-weight="700">view-routed action tokens</text>
+  <text x="144" y="564" fill="#5D6771" font-family="Arial, sans-serif" font-size="20">left / third / right actuator exposure</text>
+
+  <rect x="122" y="622" width="290" height="108" rx="18" fill="#EEE4FA"/>
+  <text x="144" y="668" fill="#7A35C4" font-family="Arial, sans-serif" font-size="24" font-weight="700">text instruction conditioning</text>
+  <text x="144" y="700" fill="#5D6771" font-family="Arial, sans-serif" font-size="20">task prompt fused in the DiT block</text>
+
+  <rect x="506" y="196" width="390" height="588" rx="30" fill="#EFF4F5" stroke="#D6E0E3" stroke-width="2"/>
+  <text x="548" y="258" fill="#182530" font-family="Arial, sans-serif" font-size="32" font-weight="700">Three HAI Components</text>
+
+  <rect x="548" y="308" width="306" height="110" rx="20" fill="#FFFFFF" stroke="#0D6D73" stroke-width="3"/>
+  <text x="576" y="356" fill="#0D6D73" font-family="Arial, sans-serif" font-size="24" font-weight="700">1. Hierarchical Action Alignment</text>
+  <text x="576" y="390" fill="#54636E" font-family="Arial, sans-serif" font-size="20">separate action structure across views and actuators</text>
+
+  <rect x="548" y="452" width="306" height="110" rx="20" fill="#FFFFFF" stroke="#C56A26" stroke-width="3"/>
+  <text x="576" y="500" fill="#C56A26" font-family="Arial, sans-serif" font-size="24" font-weight="700">2. Anchored Static-Dynamic Decoupling</text>
+  <text x="576" y="534" fill="#54636E" font-family="Arial, sans-serif" font-size="20">retrieve anchor context separately from dynamic rollout state</text>
+
+  <rect x="548" y="596" width="306" height="110" rx="20" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+  <text x="576" y="644" fill="#4C87F5" font-family="Arial, sans-serif" font-size="24" font-weight="700">3. Interaction-Structured Multi-View Communication</text>
+  <text x="576" y="678" fill="#54636E" font-family="Arial, sans-serif" font-size="20">camera-contract masks regulate cross-view attention</text>
+
+  <rect x="948" y="220" width="370" height="560" rx="28" fill="#E7EEF0"/>
+  <text x="988" y="282" fill="#182530" font-family="Arial, sans-serif" font-size="30" font-weight="700">AgiBot Evaluation</text>
+  <rect x="988" y="332" width="290" height="92" rx="18" fill="#FFFFFF" stroke="#D0D9DE" stroke-width="2"/>
+  <text x="1012" y="378" fill="#182530" font-family="Arial, sans-serif" font-size="24" font-weight="700">Base baseline</text>
+  <text x="1012" y="408" fill="#5B6871" font-family="Arial, sans-serif" font-size="20">implementation-matched symmetric conditioning</text>
+
+  <rect x="988" y="466" width="290" height="92" rx="18" fill="#FFFFFF" stroke="#D0D9DE" stroke-width="2"/>
+  <text x="1012" y="512" fill="#182530" font-family="Arial, sans-serif" font-size="24" font-weight="700">Ctrl-World</text>
+  <text x="1012" y="542" fill="#5B6871" font-family="Arial, sans-serif" font-size="20">matched validation clips and rollout length</text>
+
+  <rect x="988" y="600" width="290" height="130" rx="18" fill="#FFFFFF" stroke="#D0D9DE" stroke-width="2"/>
+  <text x="1012" y="646" fill="#182530" font-family="Arial, sans-serif" font-size="24" font-weight="700">Rollout diagnostics</text>
+  <text x="1012" y="678" fill="#5B6871" font-family="Arial, sans-serif" font-size="20">cross-view consistency</text>
+  <text x="1012" y="706" fill="#5B6871" font-family="Arial, sans-serif" font-size="20">contact continuity</text>
+  <text x="1012" y="734" fill="#5B6871" font-family="Arial, sans-serif" font-size="20">downstream VLA relevance</text>
+
+  <path d="M454 498H506" stroke="#13222E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M482 480L508 498L482 516" stroke="#13222E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M896 498H948" stroke="#13222E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M924 480L950 498L924 516" stroke="#13222E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

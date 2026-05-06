@@ -1,0 +1,234 @@
+<svg width="1800" height="980" viewBox="0 0 1800 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1800" height="980" rx="42" fill="#F6F1E8"/>
+  <rect x="28" y="28" width="1744" height="924" rx="34" fill="#FEFCF8" stroke="#D6E1E5" stroke-width="2"/>
+
+  <text x="72" y="92" fill="#182530" font-family="Arial, sans-serif" font-size="28" font-weight="700">Anchor Frame</text>
+  <rect x="72" y="118" width="90" height="32" rx="12" fill="#F8A31A"/>
+  <rect x="174" y="118" width="98" height="32" rx="12" fill="#4C87F5"/>
+  <rect x="286" y="118" width="90" height="32" rx="12" fill="#59B564"/>
+  <text x="91" y="140" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Left view</text>
+  <text x="193" y="140" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Third view</text>
+  <text x="307" y="140" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Right view</text>
+
+  <rect x="72" y="164" width="104" height="96" rx="10" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+  <rect x="186" y="164" width="104" height="96" rx="10" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+  <rect x="300" y="164" width="104" height="96" rx="10" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+  <rect x="74" y="166" width="100" height="92" rx="8" fill="#D9DADB"/>
+  <rect x="188" y="166" width="100" height="92" rx="8" fill="#D9DADB"/>
+  <rect x="302" y="166" width="100" height="92" rx="8" fill="#D9DADB"/>
+  <path d="M96 244L118 210L138 232L160 194V244H96Z" fill="#13222E"/>
+  <path d="M216 240L246 194L266 222L276 204V240H216Z" fill="#13222E"/>
+  <path d="M326 244L354 202L378 230L390 182V244H326Z" fill="#13222E"/>
+
+  <path d="M416 212H494" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M478 194L502 212L478 230" stroke="#13222E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="506" y="178" width="118" height="76" rx="18" fill="#F2F5F7" stroke="#4C87F5" stroke-width="3"/>
+  <text x="543" y="212" fill="#13222E" font-family="Arial, sans-serif" font-size="20" font-weight="700">vision</text>
+  <text x="530" y="238" fill="#13222E" font-family="Arial, sans-serif" font-size="20" font-weight="700">encoder</text>
+
+  <path d="M626 212H694" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M678 194L702 212L678 230" stroke="#13222E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="724" y="166" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+    <rect x="756" y="166" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+    <rect x="788" y="166" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+    <rect x="820" y="166" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+    <rect x="852" y="166" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+    <rect x="884" y="166" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+
+    <rect x="724" y="210" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+    <rect x="756" y="210" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+    <rect x="788" y="210" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+    <rect x="820" y="210" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+    <rect x="852" y="210" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+    <rect x="884" y="210" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+
+    <rect x="724" y="254" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+    <rect x="756" y="254" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+    <rect x="788" y="254" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+    <rect x="820" y="254" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+    <rect x="852" y="254" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+    <rect x="884" y="254" width="24" height="24" rx="5" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+  </g>
+
+  <text x="988" y="128" fill="#23323D" font-family="Arial, sans-serif" font-size="20" font-weight="700">Anchor Bank</text>
+  <text x="912" y="190" fill="#445661" font-family="Arial, sans-serif" font-size="16" font-weight="700">Cache</text>
+  <path d="M908 212H986" stroke="#207E84" stroke-width="5" stroke-linecap="round"/>
+  <path d="M972 194L994 212L972 230" stroke="#207E84" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1038" cy="160" rx="46" ry="16" fill="#DDF0F1" stroke="#207E84" stroke-width="4"/>
+  <rect x="992" y="160" width="92" height="90" fill="#EAF4F4" stroke="#207E84" stroke-width="4"/>
+  <ellipse cx="1038" cy="250" rx="46" ry="16" fill="#EAF4F4" stroke="#207E84" stroke-width="4"/>
+  <rect x="1006" y="192" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+  <rect x="1030" y="192" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+  <rect x="1054" y="192" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+  <rect x="1006" y="224" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+  <rect x="1030" y="224" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+  <rect x="1054" y="224" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+  <rect x="1006" y="256" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+  <rect x="1030" y="256" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+  <rect x="1054" y="256" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+
+  <rect x="1194" y="98" width="362" height="100" rx="20" fill="#EEE5FA" stroke="#B38AF6" stroke-width="3"/>
+  <text x="1316" y="146" fill="#7A35C4" font-family="Arial, sans-serif" font-size="28" font-weight="700">Text Instruction</text>
+  <text x="1302" y="182" fill="#1D2C37" font-family="Arial, sans-serif" font-size="24" font-weight="700">Close the pen cap.</text>
+  <path d="M1374 198V258" stroke="#13222E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1360 246L1374 262L1388 246" stroke="#13222E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1308" y="260" width="132" height="86" rx="18" fill="#F7F2FC" stroke="#8A52F6" stroke-width="4"/>
+  <text x="1350" y="300" fill="#1D2C37" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">text</text>
+  <text x="1374" y="326" fill="#1D2C37" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">embedder</text>
+
+  <text x="88" y="352" fill="#1B2B36" font-family="Arial, sans-serif" font-size="28" font-weight="700">History Frames</text>
+  <rect x="72" y="388" width="88" height="96" rx="14" fill="#FFF5E6" stroke="#F8A31A" stroke-width="3"/>
+  <rect x="72" y="506" width="88" height="96" rx="14" fill="#ECF2FE" stroke="#4C87F5" stroke-width="3"/>
+  <rect x="72" y="624" width="88" height="96" rx="14" fill="#EDF7EE" stroke="#59B564" stroke-width="3"/>
+  <text x="116" y="432" fill="#F19A00" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Left</text>
+  <text x="116" y="456" fill="#F19A00" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">view</text>
+  <text x="116" y="550" fill="#4C87F5" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Third</text>
+  <text x="116" y="574" fill="#4C87F5" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">view</text>
+  <text x="116" y="668" fill="#59B564" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Right</text>
+  <text x="116" y="692" fill="#59B564" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">view</text>
+
+  <rect x="188" y="380" width="298" height="102" rx="8" fill="#D8DADB"/>
+  <rect x="188" y="498" width="298" height="102" rx="8" fill="#D8DADB"/>
+  <rect x="188" y="616" width="298" height="102" rx="8" fill="#D8DADB"/>
+  <path d="M198 474L242 402L276 430L338 398L476 398V474H198Z" fill="#13222E"/>
+  <path d="M198 592L232 540L288 512L356 544L476 544V592H198Z" fill="#3B4B57"/>
+  <path d="M198 710L264 628L324 670L380 628L476 628V710H198Z" fill="#182530"/>
+
+  <path d="M506 550H560" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M546 532L570 550L546 568" stroke="#13222E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="564" y="510" width="118" height="80" rx="18" fill="#F2F5F7" stroke="#4C87F5" stroke-width="3"/>
+  <text x="601" y="545" fill="#13222E" font-family="Arial, sans-serif" font-size="20" font-weight="700">vision</text>
+  <text x="588" y="571" fill="#13222E" font-family="Arial, sans-serif" font-size="20" font-weight="700">encoder</text>
+
+  <path d="M696 550H716" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M708 532L732 550L708 568" stroke="#13222E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="710" y="452" width="126" height="164" rx="24" fill="#F9F2DE" stroke="#A46B1B" stroke-width="4"/>
+  <text x="773" y="538" fill="#2C2C2C" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Self-Attn</text>
+
+  <rect x="850" y="408" width="234" height="252" rx="28" fill="#EAF1FB" stroke="#4C87F5" stroke-width="4"/>
+  <text x="967" y="462" fill="#4C87F5" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Cross-view</text>
+  <text x="967" y="492" fill="#4C87F5" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Attn</text>
+  <circle cx="967" cy="548" r="34" fill="#F0F6FF" stroke="#4C87F5" stroke-width="4"/>
+  <circle cx="908" cy="602" r="24" fill="#FFF5E6" stroke="#F08A11" stroke-width="4"/>
+  <circle cx="1026" cy="602" r="24" fill="#EDF7EE" stroke="#59B564" stroke-width="4"/>
+  <text x="967" y="558" fill="#4C87F5" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">T</text>
+  <text x="908" y="611" fill="#F08A11" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">L</text>
+  <text x="1026" y="611" fill="#59B564" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">R</text>
+  <path d="M932 566L945 578" stroke="#207E84" stroke-width="4" stroke-linecap="round"/>
+  <path d="M989 578L1002 566" stroke="#207E84" stroke-width="4" stroke-linecap="round"/>
+  <path d="M930 604H1004" stroke="#207E84" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="1110" y="432" width="542" height="206" rx="28" fill="#EDF4FE"/>
+  <text x="1380" y="650" fill="#1D2C37" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Condition Fusion</text>
+
+  <rect x="1136" y="478" width="154" height="86" rx="20" fill="#FFF2F1" stroke="#A43731" stroke-width="4"/>
+  <text x="1213" y="513" fill="#A43731" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Frame-Action</text>
+  <text x="1213" y="540" fill="#A43731" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Attn</text>
+
+  <rect x="1310" y="478" width="154" height="86" rx="20" fill="#E6F4F3" stroke="#167D82" stroke-width="4"/>
+  <text x="1387" y="513" fill="#167D82" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Global-Anchor</text>
+  <text x="1387" y="540" fill="#167D82" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Attn</text>
+
+  <rect x="1484" y="478" width="154" height="86" rx="20" fill="#F1EAFE" stroke="#8A52F6" stroke-width="4"/>
+  <text x="1561" y="513" fill="#8A52F6" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Text</text>
+  <text x="1561" y="540" fill="#8A52F6" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Cross-Attn</text>
+
+  <rect x="1654" y="458" width="118" height="124" rx="22" fill="#F9F2DE" stroke="#A46B1B" stroke-width="4"/>
+  <text x="1713" y="528" fill="#2C2C2C" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">MLP</text>
+
+  <path d="M1084 550H1130" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1290 521H1310" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1464 521H1484" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1638 521H1654" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1710 346V474" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 12"/>
+  <path d="M1374 346V478" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 12"/>
+
+  <path d="M1092 255C1188 286 1270 384 1304 476" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 12"/>
+  <text x="1112" y="274" fill="#3C4043" font-family="Arial, sans-serif" font-size="16" font-weight="700">query</text>
+
+  <rect x="676" y="372" width="1012" height="332" rx="24" fill="none" stroke="#B9D8AA" stroke-width="6"/>
+  <text x="1540" y="676" fill="#1B2B36" font-family="Arial, sans-serif" font-size="28" font-weight="700">DiT block</text>
+  <text x="1540" y="710" fill="#1B2B36" font-family="Arial, sans-serif" font-size="18" font-weight="700">× N blocks</text>
+
+  <text x="96" y="776" fill="#1B2B36" font-family="Arial, sans-serif" font-size="28" font-weight="700">Raw Actions</text>
+  <rect x="72" y="816" width="248" height="92" rx="18" fill="#FFF0EF" stroke="#A43731" stroke-width="3"/>
+  <path d="M108 882V838" stroke="#A43731" stroke-width="4" stroke-linecap="round"/>
+  <path d="M108 838L98 858H118L108 838Z" fill="#A43731"/>
+  <path d="M108 882H164" stroke="#A43731" stroke-width="4" stroke-linecap="round"/>
+  <path d="M164 882L144 872V892L164 882Z" fill="#A43731"/>
+  <path d="M178 872C206 826 240 850 276 872" stroke="#8E1F22" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="276" cy="872" r="6" fill="#8E1F22"/>
+  <text x="118" y="846" fill="#7A5C5A" font-family="Arial, sans-serif" font-size="14" font-weight="700">dy</text>
+  <text x="174" y="873" fill="#7A5C5A" font-family="Arial, sans-serif" font-size="14" font-weight="700">dx</text>
+  <text x="148" y="856" fill="#7A5C5A" font-family="Arial, sans-serif" font-size="14" font-weight="700">dz</text>
+
+  <path d="M332 862H402" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M386 844L410 862L386 880" stroke="#13222E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="410" y="820" width="122" height="86" rx="18" fill="#F6F1F0" stroke="#A43731" stroke-width="3"/>
+  <text x="450" y="856" fill="#1D2C37" font-family="Arial, sans-serif" font-size="20" font-weight="700">action</text>
+  <text x="434" y="882" fill="#1D2C37" font-family="Arial, sans-serif" font-size="20" font-weight="700">embedder</text>
+
+  <text x="694" y="760" fill="#3B454B" font-family="Arial, sans-serif" font-size="18" font-weight="700">Coarse</text>
+  <text x="1032" y="838" fill="#3B454B" font-family="Arial, sans-serif" font-size="18" font-weight="700">Fine</text>
+  <path d="M662 572C654 654 718 710 820 796" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 12"/>
+  <path d="M1180 566C1158 612 1142 692 1122 812" stroke="#2A2A2A" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 12"/>
+
+  <rect x="740" y="784" width="84" height="32" rx="12" fill="#EAF0FA" stroke="#C9D5E6" stroke-width="2"/>
+  <rect x="740" y="836" width="84" height="32" rx="12" fill="#EAF0FA" stroke="#C9D5E6" stroke-width="2"/>
+  <rect x="740" y="888" width="84" height="32" rx="12" fill="#EAF0FA" stroke="#C9D5E6" stroke-width="2"/>
+  <text x="782" y="806" fill="#8C97A3" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">left</text>
+  <text x="782" y="858" fill="#8C97A3" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">full</text>
+  <text x="782" y="910" fill="#8C97A3" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">right</text>
+
+  <rect x="854" y="786" width="108" height="24" rx="6" fill="#FFFFFF" stroke="#F8A31A" stroke-width="3"/>
+  <rect x="871" y="792" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#F8A31A" stroke-width="2"/>
+  <rect x="893" y="792" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#F8A31A" stroke-width="2"/>
+  <rect x="915" y="792" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#F8A31A" stroke-width="2"/>
+
+  <rect x="854" y="838" width="108" height="24" rx="6" fill="#FFFFFF" stroke="#4C87F5" stroke-width="3"/>
+  <rect x="871" y="844" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#4C87F5" stroke-width="2"/>
+  <rect x="893" y="844" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#4C87F5" stroke-width="2"/>
+  <rect x="915" y="844" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#4C87F5" stroke-width="2"/>
+
+  <rect x="854" y="890" width="108" height="24" rx="6" fill="#FFFFFF" stroke="#59B564" stroke-width="3"/>
+  <rect x="871" y="896" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#59B564" stroke-width="2"/>
+  <rect x="893" y="896" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#59B564" stroke-width="2"/>
+  <rect x="915" y="896" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#59B564" stroke-width="2"/>
+
+  <circle cx="1004" cy="798" r="18" fill="#FFF5E6" stroke="#F08A11" stroke-width="4"/>
+  <circle cx="1004" cy="850" r="18" fill="#ECF2FE" stroke="#4C87F5" stroke-width="4"/>
+  <circle cx="1004" cy="902" r="18" fill="#EDF7EE" stroke="#59B564" stroke-width="4"/>
+  <text x="1004" y="805" fill="#F08A11" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">L</text>
+  <text x="1004" y="857" fill="#4C87F5" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">T</text>
+  <text x="1004" y="909" fill="#59B564" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">R</text>
+
+  <text x="726" y="946" fill="#1B2B36" font-family="Arial, sans-serif" font-size="18" font-weight="700">View-routed action tokens</text>
+
+  <text x="1566" y="150" fill="#22303B" font-family="Arial, sans-serif" font-size="28" font-weight="700">Future Frames</text>
+  <rect x="1450" y="250" width="86" height="82" rx="14" fill="#FFF5E6" stroke="#F8A31A" stroke-width="3"/>
+  <rect x="1450" y="448" width="86" height="82" rx="14" fill="#ECF2FE" stroke="#4C87F5" stroke-width="3"/>
+  <rect x="1450" y="646" width="86" height="82" rx="14" fill="#EDF7EE" stroke="#59B564" stroke-width="3"/>
+  <text x="1493" y="288" fill="#F19A00" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Left</text>
+  <text x="1493" y="312" fill="#F19A00" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">view</text>
+  <text x="1493" y="486" fill="#4C87F5" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Third</text>
+  <text x="1493" y="510" fill="#4C87F5" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">view</text>
+  <text x="1493" y="684" fill="#59B564" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Right</text>
+  <text x="1493" y="708" fill="#59B564" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">view</text>
+
+  <path d="M1772 520H1790" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1776 520H1790" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1772 520C1730 520 1672 520 1536 520" stroke="#13222E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1754 502L1778 520L1754 538" stroke="#13222E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="1556" y="242" width="200" height="90" rx="10" fill="#D8DADB"/>
+  <rect x="1556" y="440" width="200" height="90" rx="10" fill="#D8DADB"/>
+  <rect x="1556" y="638" width="200" height="90" rx="10" fill="#D8DADB"/>
+  <path d="M1570 322L1620 268L1668 286L1708 252L1752 266V322H1570Z" fill="#13222E"/>
+  <path d="M1570 520L1622 460L1690 488L1750 470V520H1570Z" fill="#3B4B57"/>
+  <path d="M1570 718L1600 664L1646 696L1702 656L1752 692V718H1570Z" fill="#182530"/>
+</svg>

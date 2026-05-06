@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="32" fill="#10212D"/>
+  <circle cx="166" cy="132" r="210" fill="#0D6D73" fill-opacity="0.28"/>
+  <circle cx="1040" cy="566" r="238" fill="#C56A26" fill-opacity="0.22"/>
+  <rect x="66" y="70" width="1068" height="490" rx="28" fill="url(#paint0_linear)" stroke="#3C525F"/>
+  <text x="120" y="174" fill="#F7F2E9" font-family="Arial, sans-serif" font-size="28" font-weight="700">Anonymous Project Page</text>
+  <text x="120" y="272" fill="#F7F2E9" font-family="Arial, sans-serif" font-size="58" font-weight="700">HAI: Hierarchical Anchored</text>
+  <text x="120" y="340" fill="#F7F2E9" font-family="Arial, sans-serif" font-size="58" font-weight="700">Interaction for Multi-View</text>
+  <text x="120" y="408" fill="#F7F2E9" font-family="Arial, sans-serif" font-size="58" font-weight="700">Bimanual World Models</text>
+  <text x="120" y="492" fill="#C9D7DA" font-family="Arial, sans-serif" font-size="28">AgiBot rollouts + cleaned architecture figure + multi-view diagnostics</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="80" y1="88" x2="1110" y2="548" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16303E"/>
+      <stop offset="1" stop-color="#254A5A"/>
+    </linearGradient>
+  </defs>
+</svg>
