@@ -687,15 +687,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose <strong>HAI: Hierarchical Anchored Interaction</strong>, a world-modeling framework for
-            multi-view bimanual manipulation that treats long-horizon rollout as a structured conditioning problem.
-            HAI separates <strong>Hierarchical Action Alignment</strong>, <strong>Anchored Static-Dynamic Decoupling</strong>,
-            and <strong>Interaction-Structured Multi-View Communication</strong> within a rectified-flow DiT backbone.
-            The model fuses anchor frames, history frames, view-routed action tokens, and text instructions to predict
-            synchronized future frames across left, third, and right views. On AgiBot, we evaluate HAI against
-            <strong>Base</strong>, an implementation-matched Symmetric View Conditioning baseline, and <strong>Ctrl-World</strong>
-            under matched validation clips and rollout horizons, and we further analyze learned-world-model rollout
-            diagnostics relevant to downstream VLA policies.
+            Multi-view bimanual robot world models must predict future observations while preserving scene identity,
+            following two synchronized but non-exchangeable arms, and maintaining consistency between global and
+            wrist-local views. Existing conditioning schemes often collapse left- and right-arm actions into a
+            view-agnostic control signal, making long-horizon rollout prone to scene drift, wrong-arm responses,
+            and cross-view inconsistency. We propose <strong>HAI</strong>, a Hierarchical Anchored Interaction
+            architecture for controllable multi-view bimanual world modeling. HAI organizes prediction as a
+            structured information flow. First, hierarchical action-view conditioning routes the bimanual action
+            chunk to camera streams, injects coarse chunk-level intent, performs structured multi-view modeling on
+            the coarse-modulated features, and then injects fine per-frame action control. Second, anchored dynamic
+            generation fuses the fine action-conditioned descriptors with persistent per-view scene anchors before
+            decoding future observations. This design aligns actuator ownership, camera-specific prediction,
+            cross-view evidence, and scene persistence within a single conditioning architecture. Experiments on
+            AgiBot and DROID show that HAI improves long-horizon rollout quality over the baselines. Ablations
+            confirm gains in scene stability, wrist-view controllability, and cross-view consistency, and
+            policy-in-the-loop diagnostics indicate more useful synthetic rollout signals for downstream VLA policies.
           </p>
         </div>
       </div>
