@@ -534,6 +534,52 @@
       background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
     }
 
+    .comparison-lead {
+      margin: 0 0 16px 0;
+      color: #55606b;
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+
+    .metric-insight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .metric-insight-card {
+      background: #ffffff;
+      border: 1px solid #dbe3eb;
+      border-radius: 16px;
+      padding: 14px 14px 13px 14px;
+      box-shadow: 0 6px 18px rgba(35, 53, 71, 0.06);
+    }
+
+    .metric-insight-value {
+      color: #245fd4;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .metric-insight-title {
+      color: #243447;
+      font-size: 0.98rem;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .metric-insight-text {
+      color: #5a6673;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
     .pipeline-lead {
       max-width: 860px;
       margin: 18px auto 0 auto;
@@ -649,6 +695,7 @@
 
     @media (max-width: 900px) {
       .hero-highlights,
+      .metric-insight-grid,
       .contrib-grid,
       .eval-chip-grid {
         grid-template-columns: 1fr;
@@ -1058,6 +1105,42 @@
       </a>
       <p class="comparison-caption" id="comparisonCaseCaption">
         <strong>HAI vs Ctrl-World.</strong> Compared with Ctrl-World, HAI maintains stronger long-horizon visual fidelity and interaction consistency under the same rollout setting.
+      </p>
+    </div>
+    <div class="comparison-figure-card is-secondary">
+      <div class="comparison-subsection-label">AgiBot WorldArena Metrics</div>
+      <p class="comparison-lead">
+        These additional AgiBot metrics show where HAI improves third-view and wrist-view behavior beyond the main rollout table, while preserving a camera-role-specific view of geometric fidelity, temporal smoothness, and semantic consistency.
+      </p>
+      <div class="metric-insight-grid">
+        <div class="metric-insight-card">
+          <div class="metric-insight-value">12 Best or Tied-Best</div>
+          <div class="metric-insight-title">HAI attains the strongest value in most camera-role entries.</div>
+          <p class="metric-insight-text">Across third-view and wrist-view reporting, HAI is best or tied-best in 12 metric entries, indicating broad gains rather than a narrow single-metric advantage.</p>
+        </div>
+        <div class="metric-insight-card">
+          <div class="metric-insight-value">6 / 8 Wrist-View Leads</div>
+          <div class="metric-insight-title">The wrist-view improvements are especially consistent.</div>
+          <p class="metric-insight-text">HAI leads on six wrist-view metrics, including semantic alignment, depth accuracy, aesthetic quality, background consistency, motion smoothness, and subject consistency.</p>
+        </div>
+        <div class="metric-insight-card">
+          <div class="metric-insight-value">Depth + Motion</div>
+          <div class="metric-insight-title">The strongest gains appear in geometry and temporal coherence.</div>
+          <p class="metric-insight-text">HAI is strongest on depth accuracy and motion smoothness for both camera roles, supporting the qualitative impression of more stable multi-view rollouts.</p>
+        </div>
+      </div>
+      <a
+        class="comparison-figure-link"
+        href="media/comparisons/hai-vs-ctrlworld-worldarena.png"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          class="comparison-figure"
+          src="media/comparisons/hai-vs-ctrlworld-worldarena.png"
+          alt="Additional WorldArena-style evaluation metrics on AgiBot for Ctrl-World and HAI">
+      </a>
+      <p class="comparison-caption">
+        <strong>Additional WorldArena-style evaluation metrics on AgiBot.</strong> Scores are normalized to a 0-100 scale, where higher is better. Third-view columns report the third camera, and wrist-view columns average the wrist cameras for each method. Best results are bolded within each camera role.
       </p>
     </div>
     <div class="comparison-figure-card is-secondary">
