@@ -534,6 +534,15 @@
       background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
     }
 
+    .pipeline-lead {
+      max-width: 860px;
+      margin: 18px auto 0 auto;
+      text-align: center;
+      color: #55606b;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
     .ablation-card {
       background: #ffffff;
       border: 1px solid #dbe3eb;
@@ -813,8 +822,24 @@
 <section class="section" id="pipeline">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">HAI Pipeline</h2>
-    <div class="content has-text-centered">
-      <img src="assets/hai-architecture.png" style="width: 100%; border-radius: 12px; border: 1px solid #d8dee4;" alt="HAI pipeline architecture">
+    <p class="pipeline-lead">
+      HAI organizes multi-view rollout as hierarchical action-view conditioning together with anchored dynamic generation inside a rectified-flow DiT backbone.
+    </p>
+    <div class="comparison-figure-card">
+      <div class="comparison-subsection-label">Method Overview</div>
+      <a
+        class="comparison-figure-link"
+        href="assets/hai-pipeline-arch.png"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          class="comparison-figure"
+          src="assets/hai-pipeline-arch.png"
+          alt="HAI pipeline architecture with hierarchical action-view interaction and anchored dynamic generation">
+      </a>
+      <p class="comparison-caption">
+        <strong>Hierarchical action-view interaction and anchored dynamic generation.</strong> The pipeline routes action chunks to camera-specific streams, performs structured multi-view modeling inside DiT blocks, and fuses persistent anchor information before decoding future frames.
+      </p>
     </div>
 
     <div class="contrib-grid">
