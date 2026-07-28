@@ -1361,13 +1361,13 @@
           <div class="real-task-index">Franka Task 01</div>
           <h4>Wipe the whiteboard using a blackboard eraser</h4>
           <p><strong>Observed result.</strong> The policy fine-tuned on HAI rollouts clears the writing, while the Cosmos Predict 2.5 baseline fails to complete the wipe.</p>
-          <p><strong>Failure analysis.</strong> HAI better preserves task objects across the multi-view rollout, producing higher-quality synthetic interactions and a more useful fine-tuning signal for pi0.5.</p>
+          <p><strong>Failure analysis.</strong> Successful wiping requires the rollout to preserve the identities and relative geometry of the eraser, whiteboard plane, writing region, and gripper across multiple views while maintaining the eraser's orientation and contact trajectory over time. HAI's structured multi-view conditioning produces more consistent object boundaries and higher-fidelity interaction frames, giving pi0.5 clearer supervision for approaching the board, establishing contact, choosing a sweep direction, and covering the written region. With weaker cross-view object modeling, small errors in the eraser pose or board contact location can accumulate through the synthetic rollout, leading the baseline policy to form unstable contact or miss part of the target area.</p>
         </article>
         <article class="real-task-card">
           <div class="real-task-index">Franka Task 02</div>
           <h4>Transfer bread from the bowl into the pot and place the lid on top</h4>
           <p><strong>Observed result.</strong> When the bread lands off-center, the HAI-trained policy corrects the placement, lays the bread flat, and continues the task. The Cosmos Predict 2.5 baseline does not recover.</p>
-          <p><strong>Failure analysis.</strong> We attribute this recovery behavior to HAI's mixed positive and negative training samples, which expose the model to deviations and teach the downstream policy a corrective trajectory rather than only nominal execution.</p>
+          <p><strong>Failure analysis.</strong> We attribute this recovery behavior to HAI's mixed positive and negative training samples. In addition to nominal transfers, the model observes perturbed states in which the bread is dropped off-center or remains tilted, together with the corrective re-contact, repositioning, and flattening motions needed before the lid can be placed. These rollouts teach pi0.5 that an imperfect placement is a recoverable intermediate state rather than the end of the action sequence. Without equally coherent recovery supervision, a small placement error can compound: the policy proceeds from an invalid bread pose, fails to restore a stable configuration, and cannot reliably complete the later lid-placement stage.</p>
         </article>
       </div>
     </div>
