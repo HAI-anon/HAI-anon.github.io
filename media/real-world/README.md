@@ -8,7 +8,7 @@ This directory contains the physical-robot evaluation figures used by the
 - `franka/hai-vs-cosmos-predict-2-5-pi05.png`: Franka comparison covering
   whiteboard wiping and bread-transfer recovery.
 - `agilex/hai-vs-cosmos-predict-2-5-pi05.png`: AgileX dual-arm comparison
-  covering two cross-platform manipulation sequences.
+  covering coffee-bean pouring with a transparent cup and opening a black pen.
 
 ## Figure Encoding
 

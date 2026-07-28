@@ -1376,7 +1376,7 @@
       <div class="real-platform-header">
         <div>
           <h3>AgileX Real-Robot Evaluation</h3>
-          <p>The same rollout-to-policy pipeline is transferred to the AgileX dual-arm platform, covering object-transfer and tool-interaction sequences with a different embodiment and workspace.</p>
+          <p>Two contact-rich manipulation tasks compare pi0.5 policies fine-tuned from HAI and Cosmos Predict 2.5 rollout videos on the AgileX dual-arm platform.</p>
         </div>
         <span class="real-platform-badge">AgileX</span>
       </div>
@@ -1385,14 +1385,16 @@
       </a>
       <div class="real-task-grid">
         <article class="real-task-card">
-          <div class="real-task-index">Cross-Platform Result</div>
-          <h4>Object interaction remains stable across embodiment changes</h4>
-          <p>Across both sequences, the HAI-fine-tuned policy maintains contact with the task object and reaches the highlighted target state. The baseline loses the intended interaction at the red-boxed failure points.</p>
+          <div class="real-task-index">AgileX Task 01</div>
+          <h4>Pour coffee beans into the ceramic cup</h4>
+          <p><strong>Observed result.</strong> The policy fine-tuned on HAI rollouts grasps the transparent cup containing the coffee beans, lifts it, and pours the beans into the ceramic cup. The Cosmos Predict 2.5 baseline fails to secure the initial grasp on the transparent cup.</p>
+          <p><strong>Failure analysis.</strong> Transparent containers provide weak, background-dependent boundaries and ambiguous depth cues because their appearance is dominated by refraction and the scene behind them. HAI better preserves the cup's boundary, pose, and graspable geometry across views, so its synthetic rollouts provide pi0.5 with a clearer sequence of approach, grasp, lift, and pouring motions. A weaker transparent-object representation in the baseline makes the initial grasp pose less reliable, preventing the policy from reaching the later pouring stage.</p>
         </article>
         <article class="real-task-card">
-          <div class="real-task-index">Generalization Signal</div>
-          <h4>Rollout gains transfer beyond the Franka setup</h4>
-          <p>The AgileX trials provide a second physical platform check: the benefit of HAI-generated supervision is visible under a different robot morphology, camera geometry, and manipulation workspace.</p>
+          <div class="real-task-index">AgileX Task 02</div>
+          <h4>Open the black pen</h4>
+          <p><strong>Observed result.</strong> The policy fine-tuned on HAI rollouts stabilizes the pen and removes its cap. The Cosmos Predict 2.5 baseline struggles to grasp and detach the cap, leaving the pen unopened.</p>
+          <p><strong>Failure analysis.</strong> Opening the pen requires the policy to preserve the identities of the pen body and cap while they partially occlude one another, track their contact state, and coordinate opposing stabilization and pulling motions. HAI's multi-view interaction modeling better maintains these part-level relationships through occlusion, yielding rollout supervision with more accurate grasp points and relative motion. When the cap and pen body are not modeled distinctly, small pose errors compound at contact and make the fine-tuned baseline policy less likely to generate enough controlled separation to remove the cap.</p>
         </article>
       </div>
     </div>
